@@ -18,6 +18,7 @@ export default function Home({
       <main className={styles.main}>
         <div className={styles.grid}>
           <div className={styles.wrapper}>
+            <h3>Average value of BTC/USD</h3>
             <AverageTickerValue
               bitstampData={bitstampData}
               coinbaseData={coinbaseData}
@@ -26,6 +27,7 @@ export default function Home({
           </div>
 
           <div className={styles.wrapper}>
+            <h3>Choose a currency</h3>
             <TradingPairs TradingPairsData={TradingPairsData} />
           </div>
         </div>

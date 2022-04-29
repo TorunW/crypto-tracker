@@ -19,9 +19,13 @@
   max-width: 450px;
   background-color: rgba(0, 0, 0, 0.658);
 }
+.container .main .grid .wrapper h3 {
+  text-align: center;
+  margin: 0;
+}
 .container .main .grid .wrapper .averageContainer,
 .container .main .grid .wrapper .tradingPairsContainer {
-  min-height: 550px;
+  min-height: 620px;
 }
 .container .main .grid .wrapper .tradingPairsContainer * {
   scrollbar-width: auto;
@@ -48,12 +52,11 @@
   background-color: #000000;
   padding: 0.5em 0;
 }
-.container .main .grid .wrapper .tradingPairsContainer .btnContainer button {
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .btn,
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .active {
   border-style: solid;
   border-radius: 30px;
-  border-color: white;
   background-color: #000000;
-  color: white;
   width: 110px;
   margin-bottom: 1em;
   padding: 0.3em;
@@ -61,10 +64,19 @@
   font-family: 'Lato';
   font-size: 16px;
 }
-.container .main .grid .wrapper .tradingPairsContainer .btnContainer button:hover {
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .btn:hover,
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .active:hover {
   color: #6d9f33be;
   border-color: #6d9f33be;
   transition: 0.3s ease-in;
+}
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .btn {
+  border-color: white;
+  color: white;
+}
+.container .main .grid .wrapper .tradingPairsContainer .btnContainer .active {
+  color: #6d9f33be;
+  border-color: #6d9f33be;
 }
 .container .main .GJcontainer {
   display: grid;

@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@nivo/line": "^0.79.1",
+    "context": "^2.0.6",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5"
   }

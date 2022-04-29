@@ -4,12 +4,16 @@ import styles from '../styles/Home.module.css';
 
 const TradingPairs = ({ TradingPairsData }) => {
   const [urlName, setUrlName] = useState(null);
-  console.log(urlName);
 
   let tradingPairsDisplay = TradingPairsData.map((pair, index) => {
     return (
       <div key={index}>
-        <button onClick={(e) => setUrlName(pair.url_symbol)}>
+        <button
+          className={
+            urlName && urlName === pair.url_symbol ? styles.active : styles.btn
+          }
+          onClick={(e) => setUrlName(pair.url_symbol)}
+        >
           {pair.name}
         </button>
       </div>
