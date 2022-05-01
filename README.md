@@ -1,28 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a project displaying various Cryptocurrency data, using Nextjs.
 
-This is a [Next.js](https://nextjs.org/) project displaying various Cryptocurrency data.
+On the right side we have a display of the average numbers of BTC/USD on the top, and under a graph displaying the latest value of a choosen currency pair. To choose curreny pairs there's buttons on the top right side and bottom right the values will be displayed of choosen currency pair.
 
-The data on the right side is a display of the the average number of BTC/USD
+The values are fetched from an API using static props
 
-First, run the development server:
+The graph is from Nivo, using context creates to communicate the data from the component averageTickerValue to the graph component.
 
-```bash
+To install the app:
+npm install
+
+To deploy the app:
+npm run build
+npm start
+
+To open in development:
 npm run dev
-# or
-yarn dev
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

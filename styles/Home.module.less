@@ -1,6 +1,4 @@
 .container {
-  padding: 0 2rem;
-
   height: 100%;
   display: flex;
   align-items: center;
@@ -17,7 +15,7 @@
         text-decoration: none;
         border: 1px solid #eaeaea;
         border-radius: 10px;
-        max-width: 450px;
+
         background-color: rgba(0, 0, 0, 0.658);
 
         h3 {
@@ -109,29 +107,56 @@
   }
 }
 
-.divchart {
-  height: 100vh;
-  margin: 4rem;
-}
-
 @media (min-width: 751px) {
-  .main {
-    padding: 5rem 0;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+  .container {
+    padding: 0 2rem;
+    .main {
+      padding: 5rem 0;
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        .wrapper {
+          max-width: 450px;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 750px) {
-  .main {
-    padding: 2rem 0;
+  .container {
+    padding: 0 2rem;
+
+    .main {
+      padding: 2rem 0;
+      .grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+
+        .wrapper {
+          max-width: 450px;
+        }
+      }
+    }
   }
-  .grid {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    width: 100%;
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0;
+    .main {
+      padding: 1rem 0;
+      .grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+
+        .wrapper {
+          width: 90%;
+        }
+      }
+    }
   }
 }

@@ -3,16 +3,18 @@ import TradingValue from './TradingValue';
 import styles from '../styles/Home.module.css';
 
 const TradingPairs = ({ TradingPairsData }) => {
-  const [urlName, setUrlName] = useState(null);
+  const [urlSymbol, setUrlSymbol] = useState(null);
 
   let tradingPairsDisplay = TradingPairsData.map((pair, index) => {
     return (
       <div key={index}>
         <button
           className={
-            urlName && urlName === pair.url_symbol ? styles.active : styles.btn
+            urlSymbol && urlSymbol === pair.url_symbol
+              ? styles.active
+              : styles.btn
           }
-          onClick={(e) => setUrlName(pair.url_symbol)}
+          onClick={(e) => setUrlSymbol(pair.url_symbol)}
         >
           {pair.name}
         </button>
@@ -24,7 +26,7 @@ const TradingPairs = ({ TradingPairsData }) => {
     <div className={styles.tradingPairsContainer}>
       <div className={styles.btnContainer}>{tradingPairsDisplay}</div>
 
-      <TradingValue urlName={urlName} />
+      <TradingValue urlSymbol={urlSymbol} />
     </div>
   );
 };

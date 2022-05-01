@@ -19,7 +19,7 @@ const TradingValue = (props) => {
 
   useEffect(() => {
     clearInterval(myInterval);
-    if (props.urlName && props.urlName !== null) {
+    if (props.urlSymbol && props.urlSymbol !== null) {
       // here we set the interval to run a this function every 10 seconds
       getTradingValues();
       myInterval = setInterval(getTradingValues, 10000);
@@ -27,11 +27,11 @@ const TradingValue = (props) => {
     return () => {
       clearInterval(myInterval);
     };
-  }, [props.urlName]);
+  }, [props.urlSymbol]);
 
   const getTradingValues = async () => {
     const res = await fetch(
-      `https://www.bitstamp.net/api/v2/ticker/${props.urlName}`,
+      `https://www.bitstamp.net/api/v2/ticker/${props.urlSymbol}`,
       { method: 'POST' }
     );
     const response = await res.json();
@@ -40,13 +40,12 @@ const TradingValue = (props) => {
       ...appState,
       tradingValueData: {
         ...response,
-        symbol: props.urlName,
+        symbol: props.urlSymbol,
       },
     };
     setAppState(newAppState);
   };
 
-  // const tradingValueArray = [{ ...tradingValueData }];
   const tradingValueArray = [];
   if (tradingValueData) {
     tradingValueArray = [

@@ -20,6 +20,10 @@ const MyResponsiveLine = ({ data }) => {
   ];
 
   const [dataArray, setDataArray] = useState(arr);
+  /* evertime that data changes 
+we want to check if the data is the data we wnat to use for our chart, 
+if its the same we want to expand the chart (add to the x) 
+if its not the same we restart the chart */
 
   useEffect(() => {
     if (data.symbol === dataArray[0].id) {
@@ -46,10 +50,10 @@ const MyResponsiveLine = ({ data }) => {
     <div style={{ height: '300px', color: 'black', backgroundColor: 'white' }}>
       <ResponsiveLine
         data={dataArray}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 30, right: 80, bottom: 30, left: 50 }}
         xScale={{
           type: 'linear',
-          //   min: 0,
+          // min: 0,
           //   max: 100,
         }}
         yScale={{
