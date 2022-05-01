@@ -50,7 +50,7 @@ if its not the same we restart the chart */
     <div style={{ height: '300px', color: 'black', backgroundColor: 'white' }}>
       <ResponsiveLine
         data={dataArray}
-        margin={{ top: 30, right: 80, bottom: 30, left: 50 }}
+        margin={{ top: 30, right: 85, bottom: 30, left: 80 }}
         xScale={{
           type: 'linear',
           // min: 0,
